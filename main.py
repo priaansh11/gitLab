@@ -14,7 +14,7 @@ def gradient_descent(x,y):
         b_cur=b_cur-Lr*bd
         print("m {}, b {}, cost{} iteration {}".format(m_cur,b_cur,cost,i))
     pass    
-x=np.array([1,2,3,4,5])
-y=np.array([5,7,9,11,13])
+x=np.array([1,2,3,6,5])
+y=np.array([5,7,9,15,13])
 
 gradient_descent(x,y)
