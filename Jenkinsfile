@@ -4,13 +4,13 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                checkout([$class: 'GitSCM', branches: [[name: 'main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/priaansh11/Test1repo.git']]])
+                checkout([$class: 'GitSCM', branches: [[name: 'main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/priaansh11/gitLab.git']]])
             }
         }
         stage('Build') {
             steps {
-                git branch: 'main', url: 'https://github.com/priaansh11/Test1repo.git'
-                bat 'python app.py'
+                git branch: 'main', url: 'https://github.com/priaansh11/gitLab.git'
+                bat 'python hello.py'
             }
         }
         stage('Test') {
